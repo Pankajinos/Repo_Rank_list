@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        
+        .container{
+           
+            background: #cc6060;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 23px;
+            font-size: 2vw;
+            border-radius: 12px;
+            margin: 23px;
+            box-shadow: 2px 2px 5px;
+            width: 60vw;
+
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        li{
+            padding: 5px;
+            font-weight: 400;
+            list-style: none;
+
+        }
+        .loading{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        ul{
+            display: flex;
+            gap: 2px;
+            padding: 0;
+            
+        }
+        .circle{
+            height: 6px;
+            width: 6px;
+            border-radius: 6px;
+            background-color: brown;
+            animation: pop 0.8s alternate-reverse infinite  ease-in;
+        }
+        #a{
+            animation-delay: 0s;
+        }
+        #b{
+            animation-delay: 0.125s;
+        }
+        #c{
+            animation-delay: 0.25s;
+        }
+        #d{
+            animation-delay: 0.50s;
+        }
+        #e{
+            animation-delay: 0.75s;
+        }
+        @keyframes pop{
+            0%{
+                transform: scale(0);
+
+            }
+           
+            100%{
+                transform: scale(1);
+            }
+
+
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Rank List</h2>
+        <div class="rank-list">
+        </div>
+
+        <!-- created loading bar -->
+        <div class="loading">Loading
+            <ul>
+                <li class="circle" id="a"></li>
+                <li class="circle" id="b"></li>
+                <li class="circle" id="c"></li>
+                <li class="circle" id="d"></li>
+                <li class="circle" id="e"></li>
+                
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
